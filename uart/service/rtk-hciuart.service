@@ -9,3 +9,6 @@ Type=simple
 ExecStartPre=/usr/sbin/rfkill unblock bluetooth
 ExecStart=/usr/sbin/rtk_hciattach -n -s 115200 ttyS1 rtk_h5
 ExecStopPost=/usr/sbin/rfkill block bluetooth
+
+[Install]
+WantedBy=multi-user.target
